@@ -1,15 +1,17 @@
-#Alusta programmi.
-#Küsi kasutajalt: "Mis päev on homme? (tööpäev/puhkepäev)".
-#Salvesta vastus muutujasse day.
-#Kui day on võrdne "tööpäev", siis väljasta ekraanile: "Ma lähen magama, head ööd!".
-#Kui day on võrdne "puhkepäev", siis väljasta ekraanile: "Veel üks osa Netflixist"
-#Muidu (kui sisestus ei olnud õige), siis väljasta ekraanile: "Vale väärtus".
-#Lõpeta programm.
 
-day = input("Mis päev on homme? (tööpäev/puhkepäev): ")
-if day == "tööpäev":
-    print("Ma lähen magama, head ööd!")    
-elif day == "puhkepäev":
-    print("Veel üks osa Netflixist")
-else:
-    print("Vale väärtus")
+
+
+
+ #Finantsnõustaja
+
+print("Tere tulemast programmi 'Finantsnõustaja'!")
+print("Sinu isiklik nõustaja ei tee emotsionaalseid oste.")
+
+money = int(input("Kui palju raha sul on praegu?"))
+
+if money < 2500:
+    print("Sul pole veel piisavalt raha. Ole kannatlik ja kogu edasi!")
+elif money == 2500:
+    print("Palju õnne, saad osta uue iPhone 17 Pro sularahas!")
+else: 
+    print("Saad osta iPhone 17 Pro ja veel jääb raha üle.")
