@@ -1,28 +1,29 @@
-#Programm "Tervitus"
-#Kirjuta programm, mis küsib kasutajalt tema perekonnanime ja sugu (vali „m“ või „n“).
-#Programm tervitab kasutajat vastavalt soole:
-#Kui kasutaja valib „m“, väljasta: „Tere, härra [Perekonnanimi]!“
-#Kui kasutaja valib „n“, väljasta: „Tere, proua [Perekonnanimi]!“
-#Kui kasutaja sisestab midagi muud, väljasta: „Tere tulemast, [Perekonnanimi]! (sugu ei olegi tähtis).“
+#Programm "Veejoomise kalkulaator"
+#Arstid soovitavad juua päevas 2 liitrit vett.
+#Kirjuta programm, mis küsib kasutajalt, kui palju klaase vett ta juba joonud on. Oletame, et üks klaas = 250 ml.
+#Programm arvutab, mitu protsenti päevanormist on täidetud, ja annab tagasisidet:
+#Kui protsent < 50: väljasta: „Joo rohkem vett, keha vajab seda!“
+#Kui protsent < 100: väljasta: „Tubli, jätka samas vaimus!“
+#Kui protsent ≥ 100: väljasta: „Suurepärane, oled oma päevase eesmärgi täitnud!“
+
 
 #Alusta programmi.
-#Küsi kasutajalt: "Mis on Teie perekonnanimi?".
-#Salvesta vastus muutujasse last_name.
-#Küsi kasutajalt: "Mis on Teie sugu? (m/n)".
-#Salvesta vastus muutujasse gender.
-#Kui gender on "m", siis väljasta ekraanile: "Tere, härra [last_name]!"
-#Kui gender on "n", siis väljasta ekraanile: "Tere, proua [last_name]!"
-#Muidu (kui sisestus ei olnud õige), siis väljasta ekraanile: "Tere tulemast, [last_name]!"
+#Küsi kasutajalt: "Kui palju klaase vett olete juba joonud? (üks klaas = 250 ml)".
+#Salvesta vastus muutujasse glasses.
+#Arvuta, mitu protsenti päevanormist on täidetud.
+#Kui protsent < 50, siis väljasta ekraanile: "Joo rohkem vett, keha vajab seda!"
+#Kui protsent < 100, siis väljasta ekraanile: "Tubli, jätka samas vaimus!"
+#Kui protsent ≥ 100, siis väljasta ekraanile: "Suurepärane, oled oma päevase eesmärgi täitnud!"
 #Lõpeta programm.
 
+goal = 2000
+glasses = int(input("Kui palju klaase vett olete juba joonud? (üks klaas = 250 ml) "))
+consumed = glasses * 250
+percentage = (consumed / goal) * 100
 
-
-last_name = input("Mis on Teie perekonnanimi? ")
-gender = input("Mis on Teie sugu? (m/n) ")
-
-if gender == "m":
-    print("Tere, härra", last_name, "!")
-elif gender == "n":
-    print("Tere, proua", last_name, "!")
+if percentage < 50:
+    print("Joo rohkem vett, keha vajab seda!")
+elif percentage < 100:
+    print("Tubli, jätka samas vaimus!")
 else:
-    print("Tere tulemast,", last_name, "!" )
+    print("Suurepärane, oled oma päevase eesmärgi täitnud!")
